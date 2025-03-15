@@ -1,0 +1,450 @@
+:root{
+
+  /* @link https://utopia.fyi/clamp/calculator?a=768,1440,16—48 */
+
+  --width-mobile-327px: 20.4375rem;
+
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  min-height: 100vh; 
+  background: #132128;
+}
+
+
+/**TEXT**/
+
+.text-outfit-medium{
+  font-family: "Outfit", sans-serif;
+  font-size: 0.875rem;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.text-outfit-bold{
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem;
+}
+
+/****/
+
+
+img{
+  display: block;
+}
+
+.button{
+  display: block;  
+  background: transparent;
+  border-style: none;
+}
+
+.button:hover{
+  cursor: pointer;
+  filter: brightness(1.2);
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/*MAIN*/
+
+.main-container{
+  max-width: var(--width-mobile-327px);
+  min-width: 18.75rem;
+  margin: 7.5rem auto;
+  text-align: center;
+}
+
+.sr-only{
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+
+/*GAME-MENU*/
+
+.game-menu{
+
+}
+
+.logo{
+  width: 4.5rem;
+  height: 2rem;
+  margin: 0 auto;
+}
+
+.choose-mark{
+  background: #1f3641;
+  margin: 1.875rem 0 2rem;
+  border-radius: 0.75rem;
+  border-bottom: 0.4rem solid #0e171c;
+}
+
+.choose-mark .title{
+  font-size: 1rem;
+  color: #a8bfc9;
+  padding: 1.5rem 0;
+}
+
+.container-button{
+  width: 17.375rem;
+  height: 4.5rem;
+  margin: 0 auto;
+  background: #1a2a33;
+  border-radius: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-select{
+  width: 8.1875rem;
+  height: 3.375rem;
+}
+
+.button-select svg{
+  fill: #a8bfc9;
+}
+
+.button-select.selected{
+  background: #a8bfc9;
+  border-radius: 0.5rem;
+}
+
+.button-select.selected svg{
+  fill: #1a2a33; 
+}
+
+.choose-mark .text{
+  letter-spacing: 0.055rem;
+  color: #a8bfc9;
+  padding: 1rem 0;
+}
+
+.button-versus{
+  width: 100%;
+  height: 3.5rem;
+  font-size: 1rem;
+  background: #f2b137;
+  border-radius: 0.8rem;
+  border-bottom: 0.4rem solid #d6a751;
+  margin-bottom: 1rem;
+}
+
+.button-versus:nth-of-type(2){
+  background: #31c3bd;
+  border-bottom: 0.4rem solid #50b5b2;
+}
+
+/****/
+
+
+/*CONTAINER-GAME*/
+
+.container-game{
+  width: 100%;
+  display: none;
+}
+
+.top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4.125rem;
+}
+
+.top .logo{
+  margin: 0;
+}
+
+.container-turn{
+  width: 6rem;
+  height: 2.5rem;
+  background: #1a2a33;
+  border-radius: 0.2rem;
+  border-bottom: 0.3rem solid #0e171c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top svg{
+  fill: #a8bfc9;
+  margin-right: 0.8rem;
+}
+
+.top .text{
+  color: #7d8d94;
+}
+
+.button-refresh{
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #a8bfc9;
+  border-radius: 0.25rem;
+  border-bottom: 0.2rem solid #7d8d94;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-refresh img{
+  width: 1rem;
+  height: 1rem;
+  background: #a8bfc9;
+  display: flex;
+}
+
+
+/*BOARD*/
+
+.board{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: clamp(0.5rem, -2.0588rem + 14.1176vw, 1.25rem);
+}
+
+.mark{
+  width: 6rem;
+  height: 6rem;
+  background: #1a2a33;
+  border-bottom: 0.6rem solid #0e171c;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mark:hover{
+  cursor: pointer;
+  background: url(./assets/icon-x-outline.svg) no-repeat center,
+            #1a2a33;
+}
+
+.mark svg{
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+
+
+.player-mark{
+
+}
+
+.container-score{
+  margin-top: 1.5rem;
+  display: flex;
+  column-gap: clamp(0.5rem, -2.0588rem + 14.1176vw, 1.25rem);
+}
+
+.result{
+  width: 6rem;
+  height: 4rem;
+  background: #31c3bd;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.result:nth-of-type(2){
+  background: #a8bfc9;
+}
+
+.result:nth-of-type(3){
+  background: #f2b137;
+}
+
+.player{
+  font-size: 0.75rem;
+}
+
+.score{
+  display: block;
+  font-size: 1.25rem;
+}
+
+
+/*RESULT*/
+
+.background{
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background: hsla(0, 0%, 0%, 0.7);
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.winner{
+  display: none;
+  background-color: #1F3641;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 13.75rem;
+  z-index: 10;
+}
+
+.winner .title{
+  color: #a8bfc9;
+  font-size: 0.875rem;
+  margin: 2.5rem 0 1rem;
+}
+
+.image-winner{
+  display: inline-block;
+  width: 1.875rem;
+  height: 1.875rem;
+  position: relative;
+    top: 0.4rem; left: -0.5rem;
+}
+
+.winner .text{
+  font-size: 1.5rem;
+  color: #f2b137;
+  margin-bottom: 1.75rem;
+}
+
+.winner .container-button-winner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  height: 3.25rem;
+}
+
+.winner .button{
+  height: 3.25rem;
+  background: #f2b137;
+  font-size: 1rem;
+  border-radius: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.winner .button:nth-of-type(1){
+  background: #a8bfc9;
+  width: 4.75rem;
+  border-bottom: 0.2rem solid #7d8d94;
+  margin-right: 1rem;
+}
+
+.winner .button:nth-of-type(2){
+  background: #f2b137;
+  width: 9.125rem;
+  border-bottom: 0.4rem solid #d6a751;
+}
+
+
+
+@media screen and (min-width: 30rem){
+
+
+/*MAIN*/
+
+  .main-container{
+    max-width: 28.75rem;
+  }
+
+
+/*GAME-MENU*/
+
+  .game-menu{
+    display: block;
+  }
+
+  .container-button{
+    width: 25.75rem;
+    height: 4.5rem;
+  }
+
+  .button-select{
+    width: 12.375rem;
+    height: 3.375rem;
+  }
+  
+  .button-versus{
+    width: 100%;
+    height: 4.1875rem;
+    font-size: 1.25rem;
+  }
+  
+/****/
+
+
+/*CONTAINER-GAME*/
+
+  .container-turn{
+    width: 8.75rem;
+    height: 3.25rem;
+    border-radius: 0.5rem;
+  }
+
+  .button-refresh{
+    width: 3.25rem;
+    height: 3.25rem;
+    border-radius: 0.5rem;
+  }
+
+  .button-refresh img{
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+
+  /*BOARD*/
+
+  .board{
+    gap: 1.25rem;
+  }
+
+  .mark{
+    width: 8.75rem;
+    height: 8.75rem;
+  }
+
+  .mark svg{
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .result{
+    width: 8.75rem;
+    height: 4.5rem;
+  }
+
+  .player{
+    font-size: 0.875rem;
+  }
+
+  .score{
+    font-size: 1.5rem;
+  }
+
+}
+
+
+
+
+
