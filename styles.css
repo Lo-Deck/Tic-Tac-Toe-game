@@ -15,6 +15,7 @@
 body{
   min-height: 100vh; 
   background: #132128;
+  overflow: hidden;
 }
 
 
@@ -239,6 +240,16 @@ a{
   background: url(./assets/icon-x-outline.svg) no-repeat center,
             #1a2a33;
 }
+
+
+
+.mark.play:hover{
+  cursor: default;
+  background: none;
+}
+
+
+
 
 .mark svg{
   width: 2.5rem;

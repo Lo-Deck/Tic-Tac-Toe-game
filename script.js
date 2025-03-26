@@ -36,7 +36,7 @@ function Cpu(mark, active) {
 
 function cpuPlay(array, mark){
 
-    console.log(' ********** CPU PLAYING FUNCTION *********** ');
+    // console.log(' ********** CPU PLAYING FUNCTION *********** ');
 
     //horizontal check
 
@@ -49,16 +49,18 @@ function cpuPlay(array, mark){
     console.log(array);
 
 
+
+
     while( i <= k ){
 
-        console.log(' ********** HORIZONTAL *********** ');
-        console.log('************************* i : ' + i);
-        console.log(array[i]);
+        // console.log(' ********** HORIZONTAL *********** ');
+        // console.log('************************* i : ' + i);
+        // console.log(array[i]);
 
         if(array[i] === mark){
             line++;
-            console.log('mark');
-            console.log('line : ' + line);                
+            // console.log('mark');
+            // console.log('line : ' + line);                
         }
 
         else if(array[i] === cpu.mark){
@@ -72,15 +74,16 @@ function cpuPlay(array, mark){
 
         if(i === k && priorityPlay === 2 && !array[memoriseIndex]){ //playing priority means cpu plays to win
 
-            console.log(' PLAYING PRIORITY');
-            console.log(array);
-            console.log(priorityPlay);
+            // console.log(' PLAYING PRIORITY');
+            // console.log(array);
+            // console.log(priorityPlay);
 
             array[memoriseIndex] = cpu.mark;
 
             document.querySelectorAll('.mark')[memoriseIndex].innerHTML = `<img class="player-mark" src=${ cpu.mark === 'X' ? './assets/icon-x.svg' : './assets/icon-o.svg' } alt="">`;
+            document.querySelectorAll('.mark')[memoriseIndex].classList.add('play');
 
-            console.log(array);
+            // console.log(array);
 
             memoriseIndex = 0;
 
@@ -92,18 +95,20 @@ function cpuPlay(array, mark){
 
         if(i === k && line === 2 && !array[memoriseIndex]){
 
-            console.log(' PLAYING HORIZONTAL');
-            console.log(array);
+            // console.log(' PLAYING HORIZONTAL');
+            // console.log(array);
 
-            console.log('memoriseIndex : ' + memoriseIndex);
-            console.log(' cpu.mark : ' +  cpu.mark);
-            console.log(' array[memoriseIndex] : ' +  array[memoriseIndex]);
+            // console.log('memoriseIndex : ' + memoriseIndex);
+            // console.log(' cpu.mark : ' +  cpu.mark);
+            // console.log(' array[memoriseIndex] : ' +  array[memoriseIndex]);
 
             array[memoriseIndex] = cpu.mark;
 
             document.querySelectorAll('.mark')[memoriseIndex].innerHTML = `<img class="player-mark" src=${ cpu.mark === 'X' ? './assets/icon-x.svg' : './assets/icon-o.svg' } alt="">`;
+            document.querySelectorAll('.mark')[memoriseIndex].classList.add('play');
 
-            console.log(array);      
+
+            // console.log(array);      
 
             memoriseIndex = 0;
 
@@ -152,9 +157,9 @@ function cpuPlay(array, mark){
 
     while( i <= k ){
 
-        console.log(' ********** VERTICAL *********** ');
-        console.log('************************* i : ' + i);
-        console.log(array[i]);
+        // console.log(' ********** VERTICAL *********** ');
+        // console.log('************************* i : ' + i);
+        // console.log(array[i]);
 
         if(array[i] === mark){
 
@@ -177,14 +182,16 @@ function cpuPlay(array, mark){
         
         if(i === k && priorityPlay === 2 && !array[memoriseIndex]){
 
-            console.log(' PLAYING PRIORITY');
-            console.log(array);
+            // console.log(' PLAYING PRIORITY');
+            // console.log(array);
 
             array[memoriseIndex] = cpu.mark;
 
             document.querySelectorAll('.mark')[memoriseIndex].innerHTML = `<img class="player-mark" src=${ cpu.mark === 'X' ? './assets/icon-x.svg' : './assets/icon-o.svg' } alt="">`;
+            document.querySelectorAll('.mark')[memoriseIndex].classList.add('play');
 
-            console.log(array);
+
+            // console.log(array);
 
             memoriseIndex = 0;
 
@@ -196,20 +203,21 @@ function cpuPlay(array, mark){
 
 
 
-
         if(i === k && line === 2 && !array[memoriseIndex]){
 
-            console.log(' PLAYING VERTICAL');
-            console.log(array);
+            // console.log(' PLAYING VERTICAL');
+            // console.log(array);
 
-            console.log('memoriseIndex : ' + memoriseIndex);
-            console.log(' cpu.mark : ' +  cpu.mark);
+            // console.log('memoriseIndex : ' + memoriseIndex);
+            // console.log(' cpu.mark : ' +  cpu.mark);
 
-            console.log(' array[memoriseIndex] : ' +  array[memoriseIndex]);
+            // console.log(' array[memoriseIndex] : ' +  array[memoriseIndex]);
 
             array[memoriseIndex] = cpu.mark;
 
             document.querySelectorAll('.mark')[memoriseIndex].innerHTML = `<img class="player-mark" src=${ cpu.mark === 'X' ? './assets/icon-x.svg' : './assets/icon-o.svg' } alt="">`;
+            document.querySelectorAll('.mark')[memoriseIndex].classList.add('play');
+
 
             console.log(array);
 
@@ -222,7 +230,7 @@ function cpuPlay(array, mark){
 
         else if(i === k && line !== 2){
 
-            console.log('----------------------------------------------------------reboot');
+            // console.log('----------------------------------------------------------reboot');
 
             if(k < 8){
 
@@ -262,9 +270,9 @@ function cpuPlay(array, mark){
 
     while( i <= k ){
 
-        console.log(' ********** CROSS *********** ');
-        console.log('************************* i : ' + i);
-        console.log(array[i]);
+        // console.log(' ********** CROSS *********** ');
+        // console.log('************************* i : ' + i);
+        // console.log(array[i]);
 
         if(array[i] === mark){
 
@@ -288,14 +296,16 @@ function cpuPlay(array, mark){
         
         if(i === k && priorityPlay === 2 && !array[memoriseIndex]){
 
-            console.log(' PLAYING PRIORITY');
-            console.log(array);
+            // console.log(' PLAYING PRIORITY');
+            // console.log(array);
 
             array[memoriseIndex] = cpu.mark;
 
             document.querySelectorAll('.mark')[memoriseIndex].innerHTML = `<img class="player-mark" src=${ cpu.mark === 'X' ? './assets/icon-x.svg' : './assets/icon-o.svg' } alt="">`;
+            document.querySelectorAll('.mark')[memoriseIndex].classList.add('play');
 
-            console.log(array);
+
+            // console.log(array);
 
             memoriseIndex = 0;
 
@@ -308,16 +318,18 @@ function cpuPlay(array, mark){
 
         if(i === k && line === 2 && !array[memoriseIndex]){
 
-            console.log(' PLAYING CROSSING');
-            console.log(array);
-            console.log('memoriseIndex : ' + memoriseIndex);
-            console.log(' cpu.mark : ' +  cpu.mark);
+            // console.log(' PLAYING CROSSING');
+            // console.log(array);
+            // console.log('memoriseIndex : ' + memoriseIndex);
+            // console.log(' cpu.mark : ' +  cpu.mark);
 
             array[memoriseIndex] = cpu.mark;
 
             document.querySelectorAll('.mark')[memoriseIndex].innerHTML = `<img class="player-mark" src=${ cpu.mark === 'X' ? './assets/icon-x.svg' : './assets/icon-o.svg' } alt="">`;
+            document.querySelectorAll('.mark')[memoriseIndex].classList.add('play');
 
-            console.log(array);
+
+            // console.log(array);
 
             memoriseIndex = 0;
 
@@ -328,7 +340,7 @@ function cpuPlay(array, mark){
 
         else if(i === k && line !== 2){
 
-            console.log('----------------------------------------------------------reboot');
+            // console.log('----------------------------------------------------------reboot');
 
             if(k === 6){
 
@@ -354,7 +366,7 @@ function cpuPlay(array, mark){
         else if(i === k && line === 2 && array[memoriseIndex]){ 
 
 
-            console.log('---------------------');
+            // console.log('---------------------');
 
             line = 0;
 
@@ -383,7 +395,7 @@ function cpuPlay(array, mark){
     }
 
 
-    console.log('RANDOM');
+    // console.log('RANDOM');
 
     let arrayRandom  = [];
     let indexRandom = 0;
@@ -392,12 +404,12 @@ function cpuPlay(array, mark){
 
     while(i < 8){  //cpu plays corner
 
-        console.log('first random');
+        // console.log('first random');
 
         if(!array[i]){
 
             arrayRandom.push(i);
-            console.log(arrayRandom);
+            // console.log(arrayRandom);
 
         }
 
@@ -411,13 +423,15 @@ function cpuPlay(array, mark){
 
             indexRandom = Math.floor(Math.random() * (arrayRandom.length - 0) );
 
-            console.log('indexRandom : ' + indexRandom);
-            console.log(arrayRandom);
-            console.log(arrayRandom[indexRandom]);
+            // console.log('indexRandom : ' + indexRandom);
+            // console.log(arrayRandom);
+            // console.log(arrayRandom[indexRandom]);
 
             array[arrayRandom[indexRandom]] = cpu.mark;
 
             document.querySelectorAll('.mark')[arrayRandom[indexRandom]].innerHTML = `<img class="player-mark" src=${ cpu.mark === 'X' ? './assets/icon-x.svg' : './assets/icon-o.svg' } alt="">`;
+            document.querySelectorAll('.mark')[arrayRandom[indexRandom]].classList.add('play');
+
 
             return;
 
@@ -433,12 +447,12 @@ function cpuPlay(array, mark){
 
     while(i < 8){  //cpu plays corner
 
-        console.log('second random');
+        // console.log('second random');
 
         if(!array[i]){
 
             arrayRandom.push(i);
-            console.log(arrayRandom);
+            // console.log(arrayRandom);
 
         }
 
@@ -448,22 +462,21 @@ function cpuPlay(array, mark){
 
             indexRandom = Math.floor(Math.random() * (arrayRandom.length - 0) );
 
-            console.log(indexRandom);
-            console.log(arrayRandom);
-            console.log(arrayRandom[indexRandom]);
+            // console.log(indexRandom);
+            // console.log(arrayRandom);
+            // console.log(arrayRandom[indexRandom]);
             
             array[arrayRandom[indexRandom]] = cpu.mark;
  
             document.querySelectorAll('.mark')[arrayRandom[indexRandom]].innerHTML = `<img class="player-mark" src=${ cpu.mark === 'X' ? './assets/icon-x.svg' : './assets/icon-o.svg' } alt="">`;
+            document.querySelectorAll('.mark')[arrayRandom[indexRandom]].classList.add('play');
+
 
             return;
 
         }
 
     }
-
-
-
 
 }
 
@@ -637,7 +650,7 @@ function win(array, playerMark) {
         }
         else if(array[i] && i === 8){
 
-            console.log(' ********** TIED   ***********');
+            // console.log(' ********** TIED   ***********');
             tied = 1;
             return 1;
 
@@ -714,9 +727,11 @@ function reset(){
     tied = 0;
     result = 0;    
 
+
     board.forEach( (item) => {
 
         item.innerHTML = '';
+        item.classList.remove('play'); 
 
     });
 
@@ -750,6 +765,7 @@ document.querySelector('.button-next-round').addEventListener('click', () => {
     board.forEach( (item) => {
 
         item.innerHTML = '';
+        item.classList.remove('play'); 
 
     });
 
@@ -766,7 +782,12 @@ document.querySelector('.button-next-round').addEventListener('click', () => {
 
             //CPU plays first
 
-            cpuPlay(arrayGridBoard, player1.mark);
+            setTimeout(() => {
+
+                cpuPlay(arrayGridBoard, player1.mark);
+                
+            }, 500);
+
             player1.active = true;
             document.styleSheets[1].cssRules[33].style.background = player1.hover;
             
@@ -778,6 +799,7 @@ document.querySelector('.button-next-round').addEventListener('click', () => {
 });
 
 
+
 document.querySelector('.button-refresh').addEventListener('click', () => {
 
     arrayGridBoard = Array.from( {length:9} , () => '' );
@@ -786,11 +808,12 @@ document.querySelector('.button-refresh').addEventListener('click', () => {
 
         item.innerHTML = '';
 
+        item.classList.remove('play'); 
+
     });
 
 
 });
-
 
 
 //choose X or O, player1
@@ -842,7 +865,12 @@ btnVersus.forEach( (item, index)  => {
 
                 /* CPU PLAY FIRST */
 
-                cpuPlay(arrayGridBoard, player1.mark);
+                setTimeout(() => {
+
+                    cpuPlay(arrayGridBoard, player1.mark);
+                    
+                }, 500);
+
                 player1.active = true;
                 document.styleSheets[1].cssRules[33].style.background = player1.hover;
 
@@ -882,7 +910,11 @@ board.forEach( (item, index) => {
 
     item.addEventListener('click', () => {
 
+        item.classList.add('play');        
+
         if(player1.active && !item.firstChild){//
+
+
 
             console.log(' ******************************   player1');
 
@@ -917,7 +949,11 @@ board.forEach( (item, index) => {
 
             if(cpu && !result){ 
 
-                cpuPlay(arrayGridBoard, player1.mark);
+                setTimeout(() => {
+
+                    cpuPlay(arrayGridBoard, player1.mark);
+                    
+                }, 500);
 
                 result = win(arrayGridBoard, cpu.mark);
 
